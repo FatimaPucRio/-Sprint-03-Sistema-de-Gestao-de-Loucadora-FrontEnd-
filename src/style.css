@@ -1,0 +1,303 @@
+/* --- 1. CONFIGURAÇÕES GERAIS E VARIÁVEIS CINEMATOGRÁFICAS --- */
+:root {
+    --cor-fundo-escura: #0f172a;   
+    --cor-fundo-card: #ffffff;     
+    --cor-principal: #38bdf8;      
+    --cor-secundaria: #06b6d4;    
+    --cor-texto-claro: #f8fafc;
+    --cor-texto-escuro: #1e293b;
+    --cor-sucesso: #10b981;        
+    --cor-erro: #f43f5e;          
+
+
+    --sombra-neon: 0 4px 20px rgba(56, 189, 248, 0.15);
+    --sombra-card: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo-escura);
+    color: var(--cor-texto-claro);
+    line-height: 1.6;
+    background-image: radial-gradient(circle at top right, rgba(6, 182, 212, 0.08), transparent 40%),
+                      radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.05), transparent 50%);
+    background-attachment: fixed;
+}
+
+/* --- 2. HEADER NO ESTILO STREAMING (COM BANNER DE FILMES APLICADO) --- */
+header {
+
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.95)), 
+                url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center 35%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.6), 0 0 20px rgba(6, 182, 212, 0.4);
+    margin-bottom: 25px;
+}
+
+.menu-principal {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* --- 3. BOTÕES MODERNOS --- */
+.btn {
+    padding: 10px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px; 
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--cor-texto-claro);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none; 
+    display: inline-block;
+}
+
+
+.btn:hover {
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+    color: #000;
+    font-weight: 700;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-neon);
+}
+
+
+.btn.ativo {
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+    color: #0f172a;
+    font-weight: 700;
+    border-color: transparent;
+    box-shadow: var(--sombra-neon);
+}
+
+
+.formulario .btn {
+    width: 100%;
+    margin-top: 10px;
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+    color: #0f172a;
+    font-weight: 700;
+    border: none;
+}
+
+.formulario .btn:hover {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-limpar {
+    background: rgba(244, 63, 94, 0.1) !important;
+    color: var(--cor-erro) !important;
+    border: 1px solid rgba(244, 63, 94, 0.2) !important;
+}
+
+.btn-limpar:hover {
+    background: var(--cor-erro) !important;
+    color: #fff !important;
+    box-shadow: 0 0 15px rgba(244, 63, 94, 0.3) !important;
+}
+
+/* --- 4. CARDS DE CONTEÚDO (FORMULÁRIOS) --- */
+main {
+    max-width: 700px; 
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.secao {
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto-escuro);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: none; 
+}
+
+
+.secao.ativa {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out; 
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.secao h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #0f172a;
+    border-left: 4px solid var(--cor-principal);
+    padding-left: 12px;
+}
+
+.formulario {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 25px;
+}
+
+.formulario h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #334155;
+}
+
+
+.formulario input, 
+.formulario select {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+    color: var(--cor-texto-escuro);
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.formulario input:focus, 
+.formulario select:focus {
+    border-color: var(--cor-principal);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    background-color: #fff;
+}
+
+.botoes-acao {
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+/* --- 6. ÁREA DAS LISTAGENS --- */
+
+.lista-cards {
+    margin-top: 15px;
+    padding: 20px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    border: 2px dashed #cbd5e1;
+    color: #64748b;
+    text-align: center;
+    font-style: italic;
+}
+
+/* --- 7. MENSAGENS DE FEEDBACK --- */
+
+#areaMensagemTopo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 350px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    z-index: 200;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 600px) {
+    header { padding: 20px 10px; }
+    .secao { padding: 20px; }
+    .botoes-acao { flex-direction: column; }
+    .botoes-home { flex-direction: column; gap: 15px; }
+}
+
+/* --- 8. ADICIONADO: ESTILO DA NOVA PÁGINA INICIAL (HOME) --- */
+
+.boas-vindas {
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.boas-vindas h2 {
+    font-size: 1.8rem;
+    color: var(--cor-texto-claro);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.boas-vindas p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.botoes-home {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.btn-home {
+    padding: 24px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cor-texto-claro);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 220px;
+    box-shadow: var(--sombra-card);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-home:hover {
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+    color: #0f172a;
+    border-color: transparent;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+}
+
+
+div[style*="background: rgba(217, 83, 79"], 
+div[style*="background: rgba(40, 167, 69"] {
+    color: #000000 !important;
+}

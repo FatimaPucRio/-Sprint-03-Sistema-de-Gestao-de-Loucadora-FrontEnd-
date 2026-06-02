@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "titulo": "Matrix",
+    "genero": "Ficção Científica",
+    "ano": 1999,
+    "sinopse": "Um jovem programador é induzido a uma rebelião cibernética contra as máquinas que dominam o mundo.",
+    "capa": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=400"
+  },
+  {
+    "id": 2,
+    "titulo": "O Poderoso Chefão",
+    "genero": "Drama / Crime",
+    "ano": 1972,
+    "sinopse": "Uma família mafiosa luta para estabelecer sua supremacia nos Estados Unidos pós-guerra.",
+    "capa": "https://images.unsplash.com/photo-1509281373149-e957c6296406?q=80&w=400"
+  },
+  {
+    "id": 3,
+    "titulo": "Interestelar",
+    "genero": "Ficção Científica / Drama",
+    "ano": 2014,
+    "sinopse": "Uma equipe de exploradores viaja através de um buraco de minhoca no espaço na tentativa de garantir a sobrevivência da humanidade.",
+    "capa": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400"
+  },
+  {
+    "id": 4,
+    "titulo": "O Rei Leão",
+    "genero": "Animação / Aventura",
+    "ano": 1994,
+    "sinopse": "Um jovem leão assume o seu lugar de direito como rei da savana após superar grandes tragédias.",
+    "capa": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=400"
+  }
+]
