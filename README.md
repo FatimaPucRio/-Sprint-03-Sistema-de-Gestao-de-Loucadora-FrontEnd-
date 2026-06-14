@@ -4,7 +4,13 @@ Projeto de interface front-end desenvolvido como MVP para a disciplina de Desenv
 
 ## 🎯 Objetivo
 
-Demonstrar a implementação de uma Single Page Application (SPA) robusta, capaz de integrar regras de negócio complexas, consumo de serviços assíncronos e uma experiência de usuário responsiva. O front-end atua como a camada de inteligência do lado do cliente, gerenciando estados, rotas e a comunicação segura com o servidor.
+Demonstrar a implementação de uma Single Page Application (SPA) desenvolvida para o Sistema de Gestão de Locadora, focada na integração de funcionalidades de cadastro e consulta, atuando como:
+
+* Gerenciamento de Clientes: Interface completa para realizar o cadastro, consulta, edição e exclusão de clientes, com validações de dados diretamente na interface.
+
+* Consulta ao Catálogo: Integração com serviços externos para realizar a busca dinâmica de filmes, permitindo a consulta de informações do acervo em tempo real.
+
+* Camada de Inteligência: Gerenciamento centralizado de estados, navegação fluida entre rotas e a orquestração da comunicação com o servidor para persistência das informações.
 
 ## 🛠️ Tecnologias Utilizadas
 
