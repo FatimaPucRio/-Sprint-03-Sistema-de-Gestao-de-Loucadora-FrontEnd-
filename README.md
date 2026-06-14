@@ -1,10 +1,13 @@
-🎬 Sistema de Gestão de Locadora — Front-end
+#🎬 Sistema de Gestão de Locadora — Front-end
+
 Projeto de interface front-end desenvolvido como MVP para a disciplina de Desenvolvimento Front-end Avançado da PUC-Rio.
 
-🎯 Objetivo
+#🎯 Objetivo
+
 Demonstrar a implementação de uma Single Page Application (SPA) robusta, capaz de integrar regras de negócio complexas, consumo de serviços assíncronos e uma experiência de usuário responsiva. O front-end atua como a camada de inteligência do lado do cliente, gerenciando estados, rotas e a comunicação segura com o servidor.
 
-🛠️ Tecnologias Utilizadas
+#🛠️ Tecnologias Utilizadas
+
 React.js: Framework principal para a construção da interface baseada em componentes.
 
 React Router Dom: Gerenciamento de rotas para navegação SPA (Home, Filmes, Clientes, Perfil Dinâmico).
@@ -15,7 +18,8 @@ LocalStorage: Camada de persistência local para cache de dados e fallback em ca
 
 CSS Customizado: Estilização baseada em variáveis CSS para uma interface com temática neon.
 
-🏗️ Comportamento da Aplicação
+#🏗️ Comportamento da Aplicação
+
 O front-end foi projetado para atuar como um cliente autônomo, garantindo:
 
 Gerenciamento de Estado: Utilização de useState e useEffect para controle em tempo real da interface, incluindo feedback de carregamento (loading) e alertas de sistema.
@@ -26,7 +30,7 @@ Resiliência (Graceful Degradation): O sistema possui um mecanismo de fallback. 
 
 Roteamento Dinâmico: Utilização de parâmetros de rota (useParams) e navegação programática (useNavigate) para criar experiências de perfil individualizadas sem recarregamento de página.
 
-🚀 Como Executar
+#🚀 Como Executar
 
 Inicie o servidor de desenvolvimento com o comando:
 
