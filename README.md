@@ -1,4 +1,4 @@
-# 🎬 Sistema de Gestão de Locadora — Front-End 
+# 🎬 Sistema de Gestão de Locadora - Front-End 
 
 Projeto de interface front-end desenvolvido como MVP para a disciplina de Desenvolvimento Front-end Avançado da PUC-Rio.
 
