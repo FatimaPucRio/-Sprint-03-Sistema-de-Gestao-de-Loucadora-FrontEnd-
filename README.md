@@ -26,7 +26,7 @@ Demonstrar a implementação de uma Single Page Application (SPA) desenvolvida p
 
 ## 🏗️ Comportamento da Aplicação
 
-O front-end foi projetado para atuar como um cliente autônomo, garantindo:
+Foi projetado para atuar como um cliente autônomo, garantindo:
 
 * Gerenciamento de Estado: Utilização de useState e useEffect para controle em tempo real da interface, incluindo feedback de carregamento (loading) e alertas de sistema.
 
@@ -34,7 +34,7 @@ O front-end foi projetado para atuar como um cliente autônomo, garantindo:
 
 * Resiliência (Graceful Degradation): O sistema possui um mecanismo de fallback. Caso o Back-end esteja offline, a aplicação utiliza dados simulados (Mocks) e o localStorage para manter a funcionalidade de cadastro disponível localmente.
 
-* **Roteamento Dinâmico: Utilização de parâmetros de rota (useParams) e navegação programática (useNavigate) para criar experiências de perfil individualizadas sem recarregamento de página.
+* Roteamento Dinâmico: Utilização de parâmetros de rota (useParams) e navegação programática (useNavigate) para criar experiências de perfil individualizadas sem recarregamento de página.
 
 ## 🚀 Como Executar
 
