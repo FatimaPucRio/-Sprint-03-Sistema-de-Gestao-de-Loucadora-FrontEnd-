@@ -1,14 +1,13 @@
 /* --- 1. CONFIGURAÇÕES GERAIS E VARIÁVEIS CINEMATOGRÁFICAS --- */
 :root {
     --cor-fundo-escura: #0f172a;   
-    --cor-fundo-card: #ffffff;     
+    --cor-fundo-card: #ffffff;    
     --cor-principal: #38bdf8;      
     --cor-secundaria: #06b6d4;    
     --cor-texto-claro: #f8fafc;
     --cor-texto-escuro: #1e293b;
     --cor-sucesso: #10b981;        
     --cor-erro: #f43f5e;          
-
 
     --sombra-neon: 0 4px 20px rgba(56, 189, 248, 0.15);
     --sombra-card: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
@@ -32,7 +31,6 @@ body {
 
 /* --- 2. HEADER NO ESTILO STREAMING (COM BANNER DE FILMES APLICADO) --- */
 header {
-
     background: linear-gradient(to bottom, rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.95)), 
                 url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925&auto=format&fit=crop');
     background-size: cover;
@@ -79,7 +77,6 @@ header h1 {
     display: inline-block;
 }
 
-
 .btn:hover {
     background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
     color: #000;
@@ -89,7 +86,6 @@ header h1 {
     box-shadow: var(--sombra-neon);
 }
 
-
 .btn.ativo {
     background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
     color: #0f172a;
@@ -97,7 +93,6 @@ header h1 {
     border-color: transparent;
     box-shadow: var(--sombra-neon);
 }
-
 
 .formulario .btn {
     width: 100%;
@@ -142,12 +137,10 @@ main {
     display: none; 
 }
 
-
 .secao.ativa {
     display: block;
     animation: fadeIn 0.4s ease-in-out; 
 }
-
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(8px); }
@@ -176,7 +169,6 @@ main {
     margin-bottom: 15px;
     color: #334155;
 }
-
 
 .formulario input, 
 .formulario select {
@@ -207,7 +199,6 @@ main {
 }
 
 /* --- 6. ÁREA DAS LISTAGENS --- */
-
 .lista-cards {
     margin-top: 15px;
     padding: 20px;
@@ -220,7 +211,6 @@ main {
 }
 
 /* --- 7. MENSAGENS DE FEEDBACK --- */
-
 #areaMensagemTopo {
     position: fixed;
     top: 20px;
@@ -242,7 +232,6 @@ main {
 }
 
 /* --- 8. ADICIONADO: ESTILO DA NOVA PÁGINA INICIAL (HOME) --- */
-
 .boas-vindas {
     text-align: center;
     padding: 40px 20px;
@@ -296,8 +285,68 @@ main {
     box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
 }
 
-
 div[style*="background: rgba(217, 83, 79"], 
 div[style*="background: rgba(40, 167, 69"] {
     color: #000000 !important;
+}
+
+/* --- 9. CORREÇÕES SOLICITADAS (FIXAÇÃO E RESPONSIVIDADE) --- */
+@media screen and (max-width: 375px) {
+    main { padding-bottom: 120px !important; }
+    input, select { font-size: 16px !important; }
+}
+
+.btn-fixo-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    border-top: 1px solid var(--cor-principal);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* --- 10. ADIÇÃO: BOTÕES DE AÇÃO (EDITAR/EXCLUIR) --- */
+.botoes-acao-card {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-editar {
+    background: rgba(255, 193, 7, 0.1) !important;
+    border: 1px solid #ffc107 !important;
+    color: #ffc107 !important;
+}
+
+.btn-editar:hover {
+    background: #ffc107 !important;
+    color: #000 !important;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+}
+
+.btn-excluir {
+    background: rgba(244, 63, 94, 0.1) !important;
+    border: 1px solid var(--cor-erro) !important;
+    color: var(--cor-erro) !important;
+}
+
+.btn-excluir:hover {
+    background: var(--cor-erro) !important;
+    color: #fff !important;
+    box-shadow: 0 0 10px rgba(244, 63, 94, 0.3);
+}
+
+/* --- SOLUÇÃO DE RESPONSIVIDADE E REMOÇÃO DE BORDAS --- */
+@media screen and (max-width: 375px) {
+    header h1 { display: none; }
+    .secao, .formulario, .lista-cards { border: none !important; box-shadow: none !important; padding: 10px !important; }
+    .botoes-acao-card { flex-wrap: nowrap !important; }
+    .botoes-acao-card .btn { flex: 1 !important; font-size: 0.7rem !important; padding: 6px 2px !important; }
 }
