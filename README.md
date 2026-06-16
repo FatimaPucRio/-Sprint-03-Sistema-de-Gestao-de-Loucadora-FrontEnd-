@@ -38,7 +38,22 @@ Foi projetado para atuar como um cliente autônomo, garantindo:
 
 ## 🚀 Como Executar
 
-Inicie o servidor de desenvolvimento com o comando:
+Para rodar o projeto corretamente, você precisará executar o back-end e o front-end em terminais separados:
 
-```bash
+1. Back-end (API e Swagger):
+
+Certifique-se de que o seu servidor de API esteja rodando para que o Swagger esteja disponível. Execute no terminal:
+
+```Bash
+python app.py
+
+Após iniciar, o Swagger estará acessível conforme configurado em seu app.py.
+
+2. Front-end:
+
+Inicie o servidor de desenvolvimento da interface:
+
+```Bash
 npm run dev
+
+
