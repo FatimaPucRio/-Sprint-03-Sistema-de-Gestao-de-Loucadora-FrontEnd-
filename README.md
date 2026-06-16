@@ -42,7 +42,9 @@ Para rodar o projeto corretamente, você precisará executar o back-end e o fron
 
 1. Back-end (API e Swagger):
 
-Certifique-se de que o seu servidor de API esteja rodando para que o Swagger esteja disponível. Execute no terminal:
+Certifique-se de que o seu servidor de API esteja rodando para que o Swagger esteja disponível. 
+
+Execute no terminal:
 
 ```Bash
 python app.py
@@ -53,7 +55,6 @@ Após iniciar, o Swagger estará acessível conforme configurado em seu app.py.
 
 Inicie o servidor de desenvolvimento da interface:
 
-```Bash
 npm run dev
 
 
